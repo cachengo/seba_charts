@@ -99,7 +99,7 @@ images:
 
   ingress_controller:
     repository: 'quay.io/kubernetes-ingress-controller/nginx-ingress-controller-arm64'
-    tag: '0.10.2'
+    tag: '0.24.1'
     pullPolicy: 'Always'
 
   ingress_controller_base:

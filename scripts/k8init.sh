@@ -25,7 +25,7 @@ sed "s;{{etcd_image}};$ETCD_IMAGE;g" etcd.yaml > etcd.yaml.tmp
 sed -i "s/{{unsupported_arch}}/$UNSUPPORTED_ARCH/g" etcd.yaml.tmp
 kubectl apply -f etcd.yaml.tmp
 kubectl apply -f https://docs.projectcalico.org/v3.3/getting-started/kubernetes/installation/rbac.yaml
-sed "s/{{pod_net_cidr}}/$POD_NET_CIDR/g" calico.yaml > calico.yaml.tmp
+sed "s;{{pod_net_cidr}};$POD_NET_CIDR;g" calico.yaml > calico.yaml.tmp
 kubectl apply -f calico.yaml.tmp
 rm *.tmp
 
